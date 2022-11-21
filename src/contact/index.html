@@ -6,7 +6,8 @@ layout: contact
     {% if quicklinks.links %}
 
     {% for item in quicklinks.links %}
-        <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="">
+        <div class="card w-96 bg-base-200 shadow-xl mx-auto m-8">
             <figure><img src="/static/img/{{item.title}}.png" alt="{{item.title}}" /></figure>
             <div class="card-body">
                 <h2 class="card-title">{{item.title}}</h2>
@@ -15,6 +16,7 @@ layout: contact
                 <button class="btn btn-primary" onclick="location.href='{{item.url}}'">Contact Now</button>
             </div>
         </div>
+    </div>
     {% endfor %}
 
     {% endif %}

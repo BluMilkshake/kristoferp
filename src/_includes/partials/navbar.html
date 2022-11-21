@@ -1,10 +1,13 @@
 <div class="{{ 'lg:fixed' if path == 'home' }} w-full">
     <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
         <!--Logo etc-->
-        <div class="flex items-center mx-6">
-            <a href="/" class="text-primary font-bold text-lg">
-                Logo</a>
-        </div>
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost normal-case text-xl px-2 mx-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              <span class="text-2xl p-2 text-primary-content">{</span>
+              K<span class="hidden sm:inline">ristofer</span>P.
+              <span class="text-2xl p-2 text-primary-content">}</span>
+            </a>
+          </div>
 
         <!--Toggle button (hidden on large screens)-->
         <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
@@ -22,7 +25,7 @@
                 <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                     {% for item in navigation.items %}
                         <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                            <a @click="isOpen = false" class="text-ml inline-block text-accent-content no-underline hover:text-primary py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
                     {% endfor %}
                 </ul>

@@ -2424,6 +2424,21 @@ html {
 .btn.glass:focus-visible {
   outline: 2px solid currentColor;
 }
+.btn-ghost {
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  color: currentColor;
+}
+.btn-ghost:hover,
+    .btn-ghost.btn-active {
+  --tw-border-opacity: 0;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+}
+.btn-ghost:focus-visible {
+  outline: 2px solid currentColor;
+}
 .btn-outline.btn-primary {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -2575,6 +2590,9 @@ html {
 }
 .drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-primary {
   outline: 2px solid hsl(var(--p));
+}
+.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost {
+  outline: 2px solid currentColor;
 }
 .label a:hover {
   --tw-text-opacity: 1;
@@ -3413,13 +3431,19 @@ html {
 .bottom-0 {
   bottom: 0px;
 }
+.m-4 {
+  margin: 1rem;
+}
+.m-8 {
+  margin: 2rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .my-4 {
   margin-top: 1rem;
@@ -3470,6 +3494,28 @@ html {
 }
 .h-6 {
   height: 1.5rem;
+}
+.h-4\/5 {
+  height: 80%;
+}
+.h-auto {
+  height: auto;
+}
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+.h-\[80vh\] {
+  height: 80vh;
+}
+.h-\[90vh\] {
+  height: 90vh;
+}
+.h-\[85vh\] {
+  height: 85vh;
+}
+.max-h-80 {
+  max-height: 20rem;
 }
 .w-full {
   width: 100%;
@@ -3560,6 +3606,10 @@ html {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -3589,11 +3639,17 @@ html {
 .p-6 {
   padding: 1.5rem;
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .p-1 {
   padding: 0.25rem;
 }
 .p-5 {
   padding: 1.25rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -3624,6 +3680,14 @@ html {
 .text-center {
   text-align: center;
 }
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -3652,22 +3716,25 @@ html {
 .lowercase {
   text-transform: lowercase;
 }
+.normal-case {
+  text-transform: none;
+}
 .italic {
   font-style: italic;
 }
 .leading-6 {
   line-height: 1.5rem;
 }
-.text-primary {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
 .text-transparent {
   color: transparent;
+}
+.text-primary-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.text-accent-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
 }
 .text-neutral-content {
   --tw-text-opacity: 1;
@@ -3677,13 +3744,17 @@ html {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .text-blue-800 {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
-.text-primary-content {
+.text-primary {
   --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 .text-gray-900 {
   --tw-text-opacity: 1;
@@ -3766,6 +3837,11 @@ body pre[class*="language-"] {
   border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
 .hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
@@ -3774,6 +3850,13 @@ body pre[class*="language-"] {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+
+  .sm\:inline {
+    display: inline;
+  }
 }
 
 @media (min-width: 1024px) {
