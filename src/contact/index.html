@@ -3,21 +3,20 @@ layout: contact
 ---
 
 <section class="mt-15">
-    {% if quicklinks.links %}
-
-    {% for item in quicklinks.links %}
-    <div class="">
-        <div class="card w-96 bg-base-200 shadow-xl mx-auto m-8">
-            <figure><img src="/static/img/{{item.title}}.png" alt="{{item.title}}" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">{{item.title}}</h2>
-                <p>{{item.desc}}</p>
-                <div class="card-actions justify-end">
-                <button class="btn btn-primary" onclick="location.href='{{item.url}}'">Contact Now</button>
-            </div>
-        </div>
+    <div class="my-12">
+        <form
+        action="https://usebasin.com/f/10cc330f6e9a"
+        method="POST"
+        enctype="multipart/form-data"
+        id="form"
+        class="flex flex-col items-center justify-center">
+            <label class="label">Name</label>
+            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            <label class="label">Email</label>
+            <input type="text" placeholder="Type here" requiered class="input input-bordered w-full max-w-xs" />
+            <label class="label">Message</label>
+            <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
+            <button class="btn btn-wide mt-4">Submit</button>
+        </form>
     </div>
-    {% endfor %}
-
-    {% endif %}
 </section>
