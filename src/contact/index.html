@@ -2,6 +2,18 @@
 layout: contact
 ---
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function onSubmit(token) {
+    document.getElementById("form").submit();
+    }
+</script>
+<style>
+    .grecaptcha-badge {
+    display: none;
+    }
+</style>
+
 <section class="mt-15">
     <div class="my-12">
         <form
@@ -16,7 +28,7 @@ layout: contact
             <input type="text" placeholder="Type here" requiered class="input input-bordered w-full max-w-xs" />
             <label class="label">Message</label>
             <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
-            <button class="btn btn-wide mt-4">Submit</button>
+            <button class="btn btn-wide mt-4 g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
         </form>
     </div>
 </section>
