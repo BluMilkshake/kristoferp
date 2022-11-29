@@ -23,12 +23,13 @@ layout: contact
         id="form"
         class="flex flex-col items-center justify-center">
             <label class="label">Name</label>
-            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            <input type="text" placeholder="Type here" name="name" class="input input-bordered w-full max-w-xs" />
             <label class="label">Email</label>
-            <input type="text" placeholder="Type here" requiered class="input input-bordered w-full max-w-xs" />
-            <label class="label">Message</label>
-            <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
-            <button class="btn btn-wide mt-4 g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
+            <input type="text" placeholder="Type here" name="email" requiered class="input input-bordered w-full max-w-xs" />
+            <label class="label message">Message</label>
+            <input type="text" placeholder="Type here" name="message" class="input input-bordered input-lg w-full max-w-xs" />
+            <!--This isn't my api token, it is Basin's-->
+            <button class="btn btn-wide mt-4 g-recaptcha submit" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
         </form>
     </div>
 </section>
